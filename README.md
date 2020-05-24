@@ -14,6 +14,9 @@ I used the pokeapi to create a sample kind of pokedex to analyze and to study th
 - open **Android Studio** app
 - select **Import Project from Gradle**
 
+# Download apk
+https://github.com/battagliandrea/Pokedex/blob/master/app/prod/release/app-prod-release.apk
+
 # Project specifications
 - Kotlin
 - Kotlin Coroutines
