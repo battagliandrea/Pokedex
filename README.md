@@ -6,6 +6,8 @@ I used the pokeapi to create a sample kind of pokedex to analyze and to study th
 - app_domain: Kotlin module with entities implementation and repositories interfaces
 - app_usecase: Kotlin module with use cases implementation
 
+![Screen 1](https://github.com/battagliandrea/Pokedex/blob/master/image/screen.gif) 
+
 # Import project
 - open your **Terminal** app
 - run command: `git clone <git-repository-url>`
