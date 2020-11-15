@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.navArgs
 import com.battagliandrea.pokedex.BuildConfig
 import com.battagliandrea.pokedex.R
 import com.battagliandrea.pokedex.di.viewmodel.InjectingSavedStateViewModelFactory
@@ -37,8 +36,6 @@ import javax.inject.Inject
 class DetailsFragment : Fragment() {
 
     private lateinit var mViewModel: DetailsViewModel
-
-    val args: DetailsFragmentArgs by navArgs()
 
     @Inject
     lateinit var statAdapter: StatAdapter
@@ -76,10 +73,10 @@ class DetailsFragment : Fragment() {
         setupTypeList()
         setupStatList()
 
-        args.pokemonId.also { id ->
-            restoreTransition(id)
-            mViewModel.pokeId = id
-        }
+//        args.pokemonId.also { id ->
+//            restoreTransition(id)
+//            mViewModel.pokeId = id
+//        }
 
     }
 

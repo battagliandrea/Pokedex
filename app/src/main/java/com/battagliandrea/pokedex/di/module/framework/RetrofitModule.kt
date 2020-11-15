@@ -4,7 +4,6 @@ import android.content.Context
 import com.battagliandrea.pokedex.BuildConfig
 import com.battagliandrea.pokedex.datasource.PokeApiContract
 import com.google.gson.Gson
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -58,7 +57,6 @@ open class RetrofitModule {
         return Retrofit.Builder()
                 .baseUrl(endpoint)
                 .client(okHttpClient)
-                .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
     }

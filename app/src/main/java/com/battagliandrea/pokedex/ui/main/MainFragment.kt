@@ -6,12 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
-import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.FragmentNavigator
-import androidx.navigation.fragment.FragmentNavigatorExtras
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.battagliandrea.pokedex.R
 import com.battagliandrea.pokedex.di.viewmodel.InjectingSavedStateViewModelFactory
@@ -40,7 +35,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
         postponeEnterTransition()
-        view.doOnPreDraw { startPostponedEnterTransition() }
+//        view.doOnPreDraw { startPostponedEnterTransition() }
         return view
     }
 
@@ -87,11 +82,11 @@ class MainFragment : Fragment() {
         mAdapter.onItemClickListener = object : OnPokemonItemClickListener {
 
             override fun onItemClick(view: View, pokemonId: Int) {
-
-                val action = MainFragmentDirections.actionMainFragmentToDetailsFragment(pokemonId = pokemonId)
-                val extras: FragmentNavigator.Extras = FragmentNavigatorExtras(view to "${pokemonId}")
-
-                findNavController().navigate(action, extras)
+//
+//                val action = MainFragmentDirections.actionMainFragmentToDetailsFragment(pokemonId = pokemonId)
+//                val extras: FragmentNavigator.Extras = FragmentNavigatorExtras(view to "${pokemonId}")
+//
+//                findNavController().navigate(action, extras)
             }
         }
     }

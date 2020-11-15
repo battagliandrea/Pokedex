@@ -22,7 +22,6 @@ dependencies {
     implementation deps.okhttp.logging
     implementation deps.okhttp.mock
 
-    implementation deps.retrofit.coroutine
     implementation deps.retrofit.gson
     implementation deps.retrofit.mock
     implementation (deps.retrofit.runtime) {
@@ -30,13 +29,11 @@ dependencies {
     }
 
     implementation deps.androidx.appcompat
-    implementation deps.androidx.lifecycleExt
-    implementation deps.androidx.lifecycleViewmodel
-    implementation deps.androidx.lifecycleViewmodelSavedState
+    implementation deps.androidx.lifecycle_ext
+    implementation deps.androidx.lifecycle_viewmodel
+    implementation deps.androidx.lifecycle_viewmodel_saved_state
     implementation deps.androidx.constraint
     implementation deps.androidx.constraint_solver
-    implementation deps.androidx.navigation_fragment
-    implementation deps.androidx.navigation_ui
 
     implementation deps.support.java_inject
 
@@ -50,5 +47,4 @@ dependencies {
 
     testImplementation deps.mockito.core
     testImplementation deps.mockito.inline
-    testImplementation deps.mockito.kotlin
 }
